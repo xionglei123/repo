@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/> 
+		<title>index</title>
+		<!-- 导入css -->
+		<link rel="stylesheet" type="text/css" href="css/base.css">
+		<link rel="stylesheet" type="text/css" href="css/content.css">
+		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="js/masonry.min.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="item">
+				<div class="item-header">院集团新签经营合同额</div>
+				<div class="item-content clearfix">
+					<div class="content-left">20,177</div>
+					<div class="content-right">
+						<div class="right-first">27.2%<span class="up-down _up"></span></div>
+						<div class="right-first">15866</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<div class="item-header">建科院新签经营合同额</div>
+				<div class="item-content clearfix">
+					<div class="content-left">4,551</div>
+					<div class="content-right">
+						<div class="right-first">134.0%<span class="up-down _up"></span></div>
+						<div class="right-first">1954</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<div class="item-header">咨询公司新签经营合同额</div>
+				<div class="item-content clearfix">
+					<div class="content-left">10,457</div>
+					<div class="content-right">
+						<div class="right-first">0.6%<span class="up-down _down"></span></div>
+						<div class="right-first">10517</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<div class="item-header">检验公司新签经营合同额</div>
+				<div class="item-content clearfix">
+					<div class="content-left">1,309</div>
+					<div class="content-right">
+						<div class="right-first">204.4%<span class="up-down _up"></span></div>
+						<div class="right-first">430</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-header">设计院新签经营合同额</div>
+				<div class="item-content clearfix">
+					<div class="content-left">387</div>
+					<div class="content-right">
+						<div class="right-first">56.1%<span class="up-down _up"></span></div>
+						<div class="right-first">881</div>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-header">环境中心新签经营合同额</div>
+				<div class="item-content clearfix">
+					<div class="content-left">1,127</div>
+					<div class="content-right">
+						<div class="right-first">483.9%<span class="up-down _up"></span></div>
+						<div class="right-first">193</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(".container .item:nth-child(4n)").css("margin-right","0px");
+		$(function(){
+
+			var $container = $('.container').masonry({
+				  itemSelector: '.item',
+				  gutter: 26
+				});
+				
+				$(window).resize(function(){
+					$(".container .item:nth-child(4n)").css("margin-right","0px");
+					if($(this).width()>=1200){
+						$container.width(1200).masonry({'isFitWidth':false});
+					}else{
+						$container.masonry({'isFitWidth':true});
+					}
+
+				});
+		});
+		setBgColor(1,"#61c6d0","#3ab1bd");//调用方法参数
+									   //1.-->指定模块标记号，如第一个就是第一个，第二个是第二个
+									   //"#ccc"为大背景颜色
+									   //"#aa0000"为标题背景颜色
+		setBgColor(2,"#65cc82","#33b457");
+		setBgColor(3,"#61c6d0","#3ab1bd");
+		setBgColor(4,"#aa92c5","#9780b1");
+		setBgColor(5,"#e99a6b","#d67e4a");
+		setBgColor(6,"#61c6d0","#3ab1bd");
+	</script>
+</html>
